@@ -20,15 +20,7 @@
         $command = ["join", "select", "insert", "update"];
         ?>
 
-        <!-- 名前データをanswer.php"に渡す -->
-        <form action="answer.php" method="post">
-            <input type="hidden" name="my_name" value=<?php $my_name; ?>>
-        </form>
 
-        <!-- 答えのデータをanswer.php"に渡す -->
-        <form action="answer.php" method="post">
-            <input type="hidden" name="my_name" value=$my_name>
-        </form>
 
 
         <p>お疲れ様です<?php echo$my_name; ?>さん</p>
@@ -54,6 +46,7 @@
             <?php }?>
             <br>
             <input type="submit" value="回答する">
+            <input type="hidden" name="my_name" value="<?php echo $my_name; ?>">
         </form>
     </div>
 </body>
