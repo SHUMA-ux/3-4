@@ -18,35 +18,33 @@
             $language = $_POST['language'];
             $command = $_POST['command'];
         ?>
-        <p><?php echo$my_name; ?>さんの結果は・・・？</p>
-        <p>①の答え</p>
-        <p>
-            <?php if($port_numbers=="80"){
+
+        <?php function answer($a,$b){
+            if($a==$b){
                 echo "正解!";
             }else{
                 echo "残念・・・";
             }
-                ?>
+        }
+        ?>
+        
+        
+
+
+        <p><?php echo$my_name; ?>さんの結果は・・・？</p>
+        <p>①の答え</p>
+        <p>
+            <?php answer($port_numbers,"80") ?>
         </p>
 
         <p>②の答え</p>
         <p>
-            <?php if($language=="HTML"){
-                echo "正解!";
-            }else{
-                echo "残念・・・";
-            }
-                ?>
+            <?php answer($language,"HTML") ?>
         </p>
 
         <p>③の答え</p>
         <p>
-            <?php if($command=="select"){
-                echo "正解!";
-            }else{
-                echo "残念・・・";
-            }
-                ?>
+            <?php answer($command,"select") ?>
         </p>
     </div>
 </body>
